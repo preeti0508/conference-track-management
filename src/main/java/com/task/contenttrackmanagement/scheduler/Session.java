@@ -16,7 +16,7 @@ public class Session {
     /**
      * Represents the list of talks
      */
-    private List<Talk> talks;
+    private final List<Talk> talks;
 
     /**
      * Represents the remaining duration of current session
@@ -25,7 +25,7 @@ public class Session {
     /**
      * Represents the type of session
      */
-    private SessionType sessionType;
+    private final SessionType sessionType;
 
     public Session(int remainingDuration, SessionType sessionType) {
         this.sessionType = sessionType;

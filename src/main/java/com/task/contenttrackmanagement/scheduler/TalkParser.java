@@ -13,7 +13,7 @@ import java.util.regex.Matcher;
  * @author Preeti Verma
  */
 public class TalkParser {
-    private static Logger logger = LoggerFactory.getLogger("TalkParser");
+    private static final Logger logger = LoggerFactory.getLogger("TalkParser");
 
     /**
      * This method is parsing the string line input
@@ -27,7 +27,7 @@ public class TalkParser {
         }
 
         Matcher match = CTMConstants.INPUT_LINE_PATTERN.matcher(line);
-        if (match.find() == false) {
+        if (!match.find()) {
             logger.warn("Invalid input line: " + line);
             return null;
         }

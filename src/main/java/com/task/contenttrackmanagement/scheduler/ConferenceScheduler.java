@@ -20,8 +20,7 @@ import static com.task.contenttrackmanagement.types.CTMConstants.*;
  */
 @Component
 public class ConferenceScheduler {
-    private static Logger logger = LoggerFactory.getLogger("ConferenceScheduler");
-    private List<Track> tracks;
+    private static final Logger logger = LoggerFactory.getLogger("ConferenceScheduler");
 
     /**
      * This method takes the List of strings, create the sessions and fill
@@ -31,7 +30,7 @@ public class ConferenceScheduler {
      * @return scheduled conference consisting of arranged talks
      */
     public Conference schedule(List<String> input) {
-        tracks = new ArrayList<>();
+        List<Track> tracks = new ArrayList<>();
         List<Talk> talks = new ArrayList<>();
 
         input.forEach((line) -> {

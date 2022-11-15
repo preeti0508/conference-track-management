@@ -19,7 +19,7 @@ public record Conference(List<Track> tracks) {
     public String toString() {
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < tracks.size(); i++) {
-            str.append("Track " + (i + 1) + ":" + NEW_LINE);
+            str.append("Track ").append(i + 1).append(":").append(NEW_LINE);
             str.append(tracks.get(i));
         }
         return str.toString();

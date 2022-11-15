@@ -23,14 +23,11 @@ public record Talk(String title, int duration, TalkType talkType, int talkTime) 
      */
     @Override
     public String toString() {
-        StringBuilder talkStr = new StringBuilder();
 
-        talkStr.append(formattedTime())
-                .append(title)
-                .append(appendDuration())
-                .append(CTMConstants.NEW_LINE);
-
-        return talkStr.toString();
+        return formattedTime() +
+                title +
+                appendDuration() +
+                CTMConstants.NEW_LINE;
     }
 
     /**
@@ -51,7 +48,7 @@ public record Talk(String title, int duration, TalkType talkType, int talkTime) 
     }
 
     /**
-     * This method append the talk whether its in min or lightining
+     * This method append the talk whether its in min or lightning
      *
      * @return the appended string with min or lightning
      */
@@ -61,7 +58,6 @@ public record Talk(String title, int duration, TalkType talkType, int talkTime) 
         switch (talkType) {
             case NORMAL -> durationStr.append(" ").append(duration).append(CTMConstants.TALK_MINUTES);
             case LIGHTENING -> durationStr.append(" ").append(CTMConstants.TALK_LIGHTNING);
-            default -> durationStr.append("");
         }
 
         return durationStr.toString();

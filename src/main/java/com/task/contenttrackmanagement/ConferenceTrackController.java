@@ -1,7 +1,7 @@
-package com.task.contenttrackmanagement.controller;
+package com.task.contenttrackmanagement;
 
-import com.task.contenttrackmanagement.schedular.Conference;
-import com.task.contenttrackmanagement.schedular.ConferenceScheduler;
+import com.task.contenttrackmanagement.scheduler.Conference;
+import com.task.contenttrackmanagement.scheduler.ConferenceScheduler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Rest controller to process the request to manage the conference talks.
+ *
+ * @author Preeti Verma
+ */
 @RestController
 @RequestMapping("/api/manage")
 public class ConferenceTrackController {

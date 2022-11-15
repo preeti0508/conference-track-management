@@ -1,4 +1,4 @@
-package com.task.contenttrackmanagement.schedular;
+package com.task.contenttrackmanagement.scheduler;
 
 import com.task.contenttrackmanagement.types.CTMConstants;
 import com.task.contenttrackmanagement.types.TalkType;
@@ -6,9 +6,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.regex.Matcher;
+
+/**
+ * This class is responsible for receiving the String input and parse it to generate Talk
+ *
+ * @author Preeti Verma
+ */
 public class TalkParser {
     private static Logger logger = LoggerFactory.getLogger("TalkParser");
 
+    /**
+     * This method is parsing the string line input
+     * @param line It represents a talk containing title, duration and talk type
+     * @return the Talk object is returned
+     */
     public static Talk parseInputLine(String line) {
         if (line.length() == 0) {
             return null;

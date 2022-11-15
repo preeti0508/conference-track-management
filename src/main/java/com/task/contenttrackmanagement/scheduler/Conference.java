@@ -1,12 +1,17 @@
-package com.task.contenttrackmanagement.schedular;
+package com.task.contenttrackmanagement.scheduler;
 
 import java.util.List;
 
 import static com.task.contenttrackmanagement.types.CTMConstants.NEW_LINE;
 import static com.task.contenttrackmanagement.types.CTMConstants.NEW_LINE_BEGIN;
 
-
+/**
+ *This class maintains the number of Tracks
+ *
+ * @author Preeti Verma
+ */
 public record Conference(List<Track> tracks) {
+
     public Conference(List<Track> tracks) {
         this.tracks = tracks;
     }

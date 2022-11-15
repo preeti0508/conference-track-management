@@ -1,9 +1,15 @@
-package com.task.contenttrackmanagement.schedular;
+package com.task.contenttrackmanagement.scheduler;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class maintains the number of sessions for Track
+ *
+ * @author Preeti Verma
+ */
 public class Track {
+
     private List<Session> sessions;
 
     public Track() {

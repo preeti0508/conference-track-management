@@ -1,9 +1,15 @@
+
 package com.task.contenttrackmanagement.types;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.regex.Pattern;
 
+/**
+ * Represents various application specific constants
+ *
+ * @author Preeti Verma
+ */
 public class CTMConstants {
 
     public static final String TALK_MINUTES = "min";

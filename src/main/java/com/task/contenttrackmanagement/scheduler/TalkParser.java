@@ -17,6 +17,7 @@ public class TalkParser {
 
     /**
      * This method is parsing the string line input
+     *
      * @param line It represents a talk containing title, duration and talk type
      * @return the Talk object is returned
      */
@@ -32,7 +33,7 @@ public class TalkParser {
         }
 
         String name = match.group(CTMConstants.TALK_NAME_INDEX);
-        name = name.replaceAll("> ","");
+        name = name.replaceAll("> ", "");
         String durationInString = match.group(CTMConstants.TALK_DURATION_INDEX);
 
         TalkType type;

@@ -1,4 +1,3 @@
-
 package com.task.contenttrackmanagement.types;
 
 /**
@@ -10,9 +9,9 @@ public enum SessionType {
     MORNING(540),
     LUNCH(720),
     AFTERNOON(780),
-    NETWORKING(960);
+    NETWORKING(1020);
 
-    public int startTime;
+    public final int startTime;
 
     SessionType(int startTime) {
         this.startTime = startTime;

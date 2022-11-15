@@ -3,18 +3,13 @@ package com.task.contenttrackmanagement.scheduler;
 import java.util.List;
 
 import static com.task.contenttrackmanagement.types.CTMConstants.NEW_LINE;
-import static com.task.contenttrackmanagement.types.CTMConstants.NEW_LINE_BEGIN;
 
 /**
- *This class maintains the number of Tracks
+ * This class maintains the number of Tracks
  *
  * @author Preeti Verma
  */
 public record Conference(List<Track> tracks) {
-
-    public Conference(List<Track> tracks) {
-        this.tracks = tracks;
-    }
 
     public void addTrack(Track track) {
         tracks.add(track);
@@ -24,7 +19,7 @@ public record Conference(List<Track> tracks) {
     public String toString() {
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < tracks.size(); i++) {
-            str.append(NEW_LINE_BEGIN + " Track " + (i + 1) +":"+ NEW_LINE);
+            str.append("Track " + (i + 1) + ":" + NEW_LINE);
             str.append(tracks.get(i));
         }
         return str.toString();

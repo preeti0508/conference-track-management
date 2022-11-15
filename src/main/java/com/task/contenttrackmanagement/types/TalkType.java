@@ -1,4 +1,3 @@
-
 package com.task.contenttrackmanagement.types;
 
 /**

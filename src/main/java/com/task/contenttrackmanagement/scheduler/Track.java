@@ -10,16 +10,14 @@ import java.util.List;
  */
 public class Track {
 
-    private List<Session> sessions;
+    private final List<Session> sessions;
 
     public Track() {
         sessions = new ArrayList<>();
     }
 
-    public void addSession(Session session){ sessions.add(session); }
-
-    public List<Session> getSessions() {
-        return sessions;
+    public void addSession(Session session) {
+        sessions.add(session);
     }
 
     @Override
